@@ -1,0 +1,10 @@
+moviepy
+pytorch
+openmim
+mmengine
+mmcv
+mmdet
+mmpose
+mediapipe
+git clone https://github.com/open-mmlab/mmaction2.git
+git clone https://github.com/kennymckormick/pyskl.git

@@ -1,0 +1,198 @@
+2024/09/29 14:59:18 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: win32
+    Python: 3.8.19 (default, Mar 20 2024, 19:55:45) [MSC v.1916 64 bit (AMD64)]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 216628631
+    GPU 0: Quadro M3000M
+    CUDA_HOME: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4
+    NVCC: Cuda compilation tools, release 12.4, V12.4.99
+    MSVC: 用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.40.33812 版
+    GCC: n/a
+    PyTorch: 2.4.1
+    PyTorch compiling details: PyTorch built with:
+  - C++ Version: 201703
+  - MSVC 192930154
+  - Intel(R) oneAPI Math Kernel Library Version 2023.1-Product Build 20230303 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.4.2 (Git Hash 1137e04ec0b5251ca2b4400a4fd3c667ce843d67)
+  - OpenMP 2019
+  - LAPACK is enabled (usually provided by MKL)
+  - CPU capability usage: AVX2
+  - CUDA Runtime 12.4
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 90.1
+  - Magma 2.5.4
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.4, CUDNN_VERSION=9.1.0, CXX_COMPILER=C:/cb/pytorch_1000000000000/work/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /GR /EHsc /Zc:__cplusplus /bigobj /FS /utf-8 -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE /wd4624 /wd4068 /wd4067 /wd4267 /wd4661 /wd4717 /wd4244 /wd4804 /wd4273, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.4.1, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+    TorchVision: 0.19.1
+    OpenCV: 4.6.0
+    MMEngine: 0.10.4
+
+Runtime environment:
+    dist_cfg: {'backend': 'nccl'}
+    seed: 216628631
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+2024/09/29 14:59:20 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+2024/09/29 14:59:20 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+Name of parameter - Initialization information
+
+backbone.conv1.0.weight - torch.Size([64, 3, 3, 7, 7]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.conv1.0.bias - torch.Size([64]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.conv1.1.weight - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RecognizerZelda  
+
+backbone.conv1.1.bias - torch.Size([64]): 
+The value is the same before and after calling `init_weights` of RecognizerZelda  
+
+backbone.conv.0.weight - torch.Size([128, 64, 3, 3, 3]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.conv.0.bias - torch.Size([128]): 
+KaimingInit: a=0, mode=fan_out, nonlinearity=relu, distribution =normal, bias=0 
+
+backbone.conv.1.weight - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RecognizerZelda  
+
+backbone.conv.1.bias - torch.Size([128]): 
+The value is the same before and after calling `init_weights` of RecognizerZelda  
+
+cls_head.fc.weight - torch.Size([2, 128]): 
+NormalInit: mean=0, std=0.01, bias=0 
+
+cls_head.fc.bias - torch.Size([2]): 
+NormalInit: mean=0, std=0.01, bias=0 
+2024/09/29 14:59:21 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+2024/09/29 14:59:21 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+2024/09/29 14:59:21 - mmengine - INFO - Checkpoints will be saved to D:\AI_fileCollected\code\sckletons_based_recog\tests\MMframe\work_dirs\guide.
+2024/09/29 14:59:25 - mmengine - INFO - Epoch(train)  [1][10/15]  lr: 1.0000e-02  eta: 0:01:03  time: 0.4561  data_time: 0.1358  memory: 430  loss: 0.8251  loss_cls: 0.8251
+2024/09/29 14:59:27 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 14:59:27 - mmengine - INFO - Saving checkpoint at 1 epochs
+2024/09/29 14:59:27 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+2024/09/29 14:59:32 - mmengine - INFO - Epoch(val) [1][5/5]    acc/topk1: 0.3000  acc/topk5: 1.0000  data_time: 0.7235  time: 0.9965
+2024/09/29 14:59:37 - mmengine - INFO - Epoch(train)  [2][10/15]  lr: 1.0000e-02  eta: 0:00:54  time: 0.4106  data_time: 0.1246  memory: 1187  loss: 0.8657  loss_cls: 0.8657
+2024/09/29 14:59:39 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 14:59:39 - mmengine - INFO - Saving checkpoint at 2 epochs
+2024/09/29 14:59:43 - mmengine - INFO - Epoch(val) [2][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6724  time: 0.9279
+2024/09/29 14:59:48 - mmengine - INFO - Epoch(train)  [3][10/15]  lr: 1.0000e-02  eta: 0:00:46  time: 0.4148  data_time: 0.1283  memory: 1187  loss: 0.6608  loss_cls: 0.6608
+2024/09/29 14:59:50 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 14:59:50 - mmengine - INFO - Saving checkpoint at 3 epochs
+2024/09/29 14:59:54 - mmengine - INFO - Epoch(val) [3][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6630  time: 0.9182
+2024/09/29 14:59:58 - mmengine - INFO - Epoch(train)  [4][10/15]  lr: 1.0000e-02  eta: 0:00:40  time: 0.4111  data_time: 0.1262  memory: 1187  loss: 0.6779  loss_cls: 0.6779
+2024/09/29 15:00:01 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 15:00:01 - mmengine - INFO - Saving checkpoint at 4 epochs
+2024/09/29 15:00:05 - mmengine - INFO - Epoch(val) [4][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6530  time: 0.9087
+2024/09/29 15:00:09 - mmengine - INFO - Epoch(train)  [5][10/15]  lr: 1.0000e-02  eta: 0:00:33  time: 0.4024  data_time: 0.1172  memory: 1187  loss: 0.8047  loss_cls: 0.8047
+2024/09/29 15:00:11 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 15:00:11 - mmengine - INFO - Saving checkpoint at 5 epochs
+2024/09/29 15:00:16 - mmengine - INFO - Epoch(val) [5][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6515  time: 0.9065
+2024/09/29 15:00:20 - mmengine - INFO - Epoch(train)  [6][10/15]  lr: 1.0000e-02  eta: 0:00:27  time: 0.4009  data_time: 0.1154  memory: 1187  loss: 0.8344  loss_cls: 0.8344
+2024/09/29 15:00:22 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 15:00:22 - mmengine - INFO - Saving checkpoint at 6 epochs
+2024/09/29 15:00:27 - mmengine - INFO - Epoch(val) [6][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6497  time: 0.9053
+2024/09/29 15:00:31 - mmengine - INFO - Epoch(train)  [7][10/15]  lr: 1.0000e-02  eta: 0:00:20  time: 0.4077  data_time: 0.1221  memory: 1187  loss: 0.6161  loss_cls: 0.6161
+2024/09/29 15:00:33 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 15:00:33 - mmengine - INFO - Saving checkpoint at 7 epochs
+2024/09/29 15:00:38 - mmengine - INFO - Epoch(val) [7][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6682  time: 0.9242
+2024/09/29 15:00:42 - mmengine - INFO - Epoch(train)  [8][10/15]  lr: 1.0000e-02  eta: 0:00:14  time: 0.4469  data_time: 0.1604  memory: 1187  loss: 0.6666  loss_cls: 0.6666
+2024/09/29 15:00:44 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 15:00:44 - mmengine - INFO - Saving checkpoint at 8 epochs
+2024/09/29 15:00:49 - mmengine - INFO - Epoch(val) [8][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6798  time: 0.9367
+2024/09/29 15:00:53 - mmengine - INFO - Epoch(train)  [9][10/15]  lr: 1.0000e-02  eta: 0:00:08  time: 0.4187  data_time: 0.1321  memory: 1187  loss: 0.5615  loss_cls: 0.5615
+2024/09/29 15:00:55 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 15:00:55 - mmengine - INFO - Saving checkpoint at 9 epochs
+2024/09/29 15:01:00 - mmengine - INFO - Epoch(val) [9][5/5]    acc/topk1: 0.4000  acc/topk5: 1.0000  data_time: 0.6679  time: 0.9236
+2024/09/29 15:01:04 - mmengine - INFO - Epoch(train) [10][10/15]  lr: 1.0000e-02  eta: 0:00:02  time: 0.4075  data_time: 0.1225  memory: 1187  loss: 0.6068  loss_cls: 0.6068
+2024/09/29 15:01:06 - mmengine - INFO - Exp name: 20240929_145913
+2024/09/29 15:01:06 - mmengine - INFO - Saving checkpoint at 10 epochs
+2024/09/29 15:01:11 - mmengine - INFO - Epoch(val) [10][5/5]    acc/topk1: 0.6000  acc/topk5: 1.0000  data_time: 0.6462  time: 0.9018
