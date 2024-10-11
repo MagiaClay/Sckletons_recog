@@ -108,13 +108,13 @@ def visualize(args, frames, data_samples, action_label):
             'result',
             f,
             data_sample=d,
-            draw_gt=False,
-            draw_heatmap=False,
+            draw_gt=True,
+            draw_heatmap=True,
             draw_bbox=True,
             show=False,
             wait_time=0,
             out_file=None,
-            kpt_thr=0.3)
+            kpt_thr=0.4)
         vis_frame = visualizer.get_image()
         cv2.putText(vis_frame, action_label, (10, 30), FONTFACE, FONTSCALE,
                     FONTCOLOR, THICKNESS, LINETYPE)
@@ -129,7 +129,7 @@ def main():
 
     tmp_dir = tempfile.TemporaryDirectory()
     frame_paths, frames = frame_extract(args.video, args.short_side,
-                                        tmp_dir.name)
+                                        tmp_dir.name)        # 将视频经行拆分，获得拆分后的虚拟地址
 
     h, w, _ = frames[0].shape
 
@@ -137,26 +137,26 @@ def main():
     det_results, _ = detection_inference(args.det_config, args.det_checkpoint,
                                          frame_paths, args.det_score_thr,
                                          args.det_cat_id, args.device)
-    torch.cuda.empty_cache()
+    torch.cuda.empty_cache() # 清除缓存
 
     # Get Pose estimation results.
     pose_results, pose_data_samples = pose_inference(args.pose_config,
                                                      args.pose_checkpoint,
                                                      frame_paths, det_results,
-                                                     args.device)
+                                                     args.device) # 返回pose关键点结果和图像
     torch.cuda.empty_cache()
 
     config = mmengine.Config.fromfile(args.config)
-    config.merge_from_dict(args.cfg_options)
+    config.merge_from_dict(args.cfg_options) # 新增的参数
 
     model = init_recognizer(config, args.checkpoint, args.device)
-    result = inference_skeleton(model, pose_results, (h, w))
+    result = inference_skeleton(model, pose_results, (h, w)) # 传入的是所有帧可识别的参数
 
-    max_pred_index = result.pred_score.argmax().item()
+    max_pred_index = result.pred_score.argmax().item() # 返回视频中最大可能的结果
     label_map = [x.strip() for x in open(args.label_map).readlines()]
     action_label = label_map[max_pred_index]
 
-    visualize(args, frames, pose_data_samples, action_label)
+    visualize(args, frames, pose_data_samples, action_label) # 使用label可视化
 
     tmp_dir.cleanup()
 

@@ -1,16 +1,11 @@
-# 这是一个示例 Python 脚本。
+from mmaction.apis import inference_recognizer, init_recognizer
+import os
+os.chdir('mmaction2')
+config_path = 'data/slowonly_r50_8xb16-u48-240e_ntu60-xsub-keypoint.py'
+checkpoint_path = 'data/slowonly_r50_8xb16-u48-240e_ntu60-xsub-keypoint_20220815-38db104b.pth' # 可以是本地路径
+img_path = 'data/kinetics400_tiny/train/27_CSXByd3s.mp4'   # 您可以指定自己的图片路径
 
-# 按 Shift+F10 执行或将其替换为您的代码。
-# 按 双击 Shift 在所有地方搜索类、文件、工具窗口、操作和设置。
-
-
-def print_hi(name):
-    # 在下面的代码行中使用断点来调试脚本。
-    print(f'Hi, {name}')  # 按 Ctrl+F8 切换断点。
-
-
-# 按装订区域中的绿色按钮以运行脚本。
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助
+# 从配置文件和权重文件中构建模型
+model = init_recognizer(config_path, checkpoint_path, device="cuda:0")  # device 可以是 'cuda:0'
+# 对单个视频进行测试
+result = inference_recognizer(model, img_path)

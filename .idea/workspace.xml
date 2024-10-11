@@ -5,33 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c5ec3dd-6c59-44c9-bd3e-6d7844a6bb2a" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sckletons_based_recog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/MMframe/AccuracyMetric.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/MMframe/data_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/MMframe/dataset_dataloader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/MMframe/model_train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/MMframe/reconizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/mmaction2_init_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/CODE_OF_CONDUCT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/ISSUE_TEMPLATE/1-bug-report.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/ISSUE_TEMPLATE/2-feature-request.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/ISSUE_TEMPLATE/3-documentation.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/ISSUE_TEMPLATE/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/pull_request_template.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/workflows/lint.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/workflows/merge_stage_test.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/workflows/pr_stage_test.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/.github/workflows/publish-to-pypi.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x3-100e_kinetics400-rgb.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmaction2/configs/recognition/tsn/tsn_imagenet-pretrained-r50_8xb32-1x1x3-100e_kinetics400-rgb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmaction2/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmaction2/configs/skeleton/2s-agcn/2s-agcn_8xb16-joint-u100-80e_ntu60-xsub-keypoint-2d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,26 +35,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.AccuracyMetric.executor": "Run",
-    "Python.data_pipeline.executor": "Run",
-    "Python.dataset_&&_dataloader.executor": "Run",
-    "Python.mmaction2_init_test.executor": "Run",
-    "Python.model_train.executor": "Run",
-    "Python.reconizer.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.AccuracyMetric.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_pipeline.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dataset_&amp;&amp;_dataloader.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mmaction2_init_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_train.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reconizer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AI_fileCollected\code\sckletons_based_recog\mmaction2\data\kinetics400_tiny" />
       <recent name="D:\AI_fileCollected\code\sckletons_based_recog\mmaction2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.model_train">
+  <component name="RunManager" selected="Python.main">
     <configuration name="AccuracyMetric" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="sckletons_based_recog" />
       <option name="ENV_FILES" value="" />
