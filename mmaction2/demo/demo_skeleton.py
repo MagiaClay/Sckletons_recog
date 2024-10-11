@@ -108,9 +108,9 @@ def visualize(args, frames, data_samples, action_label):
             'result',
             f,
             data_sample=d,
-            draw_gt=True,
+            draw_gt=False,
             draw_heatmap=True,
-            draw_bbox=True,
+            draw_bbox=False,
             show=False,
             wait_time=0,
             out_file=None,
@@ -150,11 +150,12 @@ def main():
     config.merge_from_dict(args.cfg_options) # 新增的参数
 
     model = init_recognizer(config, args.checkpoint, args.device)
-    result = inference_skeleton(model, pose_results, (h, w)) # 传入的是所有帧可识别的参数
+    result = inference_skeleton(model, pose_results, (h, w)) # 传入的是所有帧可识别的骨骼参数序列,输出为DataSample
 
     max_pred_index = result.pred_score.argmax().item() # 返回视频中最大可能的结果
     label_map = [x.strip() for x in open(args.label_map).readlines()]
     action_label = label_map[max_pred_index]
+    # print(result)
 
     visualize(args, frames, pose_data_samples, action_label) # 使用label可视化
 
